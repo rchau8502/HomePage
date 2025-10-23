@@ -1,70 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZotBites | UCI Healthy Cooking Coach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-nav">
+    <div class="brand">
+      <span class="brand-accent">Zot</span>Bites
+    </div>
+    <nav>
+      <a href="#auth">Join</a>
+      <a href="#ingredient-recognition">Identify Ingredients</a>
+      <a href="#pantry-recipes">Cook</a>
+      <a href="#lesson-paths">Learn</a>
+      <a href="#community">Community</a>
+    </nav>
+  </header>
 
-  <head>
-
-      <title >
-        Rich's Website
-      </title>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="styles.css">
-    <link href-"index.html">
-    <link href="skill.html">
-    <link href="favorite_video.html">
-    <link href="audio_player.html">
-    
-    
-  </head>
-  
-  <body>
-    
-    <main>
-      
-
-      
-      <section>
-        <a href="index.html">Main Page</a>
-        <a href="skill.html">Skills List</a>
-        <a href="favorite_video.html">Favorite Video</a>
-        <a href="audio_player.html">Audio Player</a>
-      </section>
-      
-
-  
-    <!-- Section1 -->
-      <div class="title">
-        <h1>Rich's website</h1>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">Learn to cook healthy, affordable meals built for UCI students</h1>
+        <p class="lead">ZotBites combines ingredient recognition, recipe coaching, and gamified lessons to help Anteaters build lifelong kitchen confidence.</p>
+        <div class="hero-cta">
+          <a class="button primary" href="#auth">Get started</a>
+          <a class="button" href="#pantry-recipes">View recipes</a>
+        </div>
       </div>
-      
-    <!-- Social Media-->
-      <section>
-  
-        <p><a target="_blank" href="https://www.instagram.com/rchau8502/"><strong>My Instagram</strong></a></p>
-        <p><a target="_blank" href="https://github.com/rchau8502"><strong>My Github</strong></a></p>
-        
-      </section>
+      <div class="hero-card" role="img" aria-label="Illustration of healthy student meals and progress tracking">
+        <p class="hero-card__title">This week</p>
+        <ul>
+          <li><span id="hero-recipes">0</span> recipes cooked</li>
+          <li><span id="hero-lessons">0</span> lessons completed</li>
+          <li>Streak: <span id="hero-streak">0</span> days</li>
+        </ul>
+        <p class="hero-card__footnote">Keep your streak alive by cooking today!</p>
+      </div>
+    </section>
 
-      <br/>
-      
-    </main>
-    
-    <br/>
-    
-    <footer>
-      
-      <img class="image" id="catphoto" src="https://i.imgur.com/urNSsbD.png" >
-       
-      
-      
-      
-        
-      <p>Made by <strong>Rich Chau</strong></p>
-      
-    </footer>
-    
-  </body>
-  
+    <section id="auth" class="section" aria-labelledby="auth-title">
+      <div class="section-header">
+        <h2 id="auth-title">Create your free account</h2>
+        <p>Restrict sign-ups to <code>@uci.edu</code> emails or open ZotBites to other guests while tagging Anteaters automatically.</p>
+      </div>
+      <div class="grid grid--2">
+        <form id="signup-form" class="card" novalidate>
+          <h3>Join ZotBites</h3>
+          <label class="field">
+            <span>Display name</span>
+            <input type="text" id="signup-name" name="name" placeholder="Zot Chef" required>
+          </label>
+          <label class="field">
+            <span>UCI email</span>
+            <input type="email" id="signup-email" name="email" placeholder="anteater@uci.edu" required>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="uci-only" checked>
+            <span>Require <code>@uci.edu</code> email domain</span>
+          </label>
+          <p class="form-help">When restriction is disabled, ZotBites will still tag UCI community members by domain.</p>
+          <button type="submit" class="button primary">Save and continue</button>
+          <p id="signup-feedback" class="form-feedback" role="alert"></p>
+        </form>
+        <aside class="card" id="account-summary" aria-live="polite">
+          <h3>Your profile</h3>
+          <p id="account-status">No account yet. Join to start earning achievements.</p>
+          <dl class="account-meta" hidden>
+            <div>
+              <dt>Name</dt>
+              <dd id="account-name">—</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd id="account-email">—</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd id="account-type">—</dd>
+            </div>
+          </dl>
+          <button type="button" id="signout" class="button" hidden>Sign out</button>
+        </aside>
+      </div>
+    </section>
+
+    <section id="ingredient-recognition" class="section" aria-labelledby="recognition-title">
+      <div class="section-header">
+        <h2 id="recognition-title">Ingredient recognition toolkit</h2>
+        <p>Choose between a hosted API for rapid validation or an offline TensorFlow.js model for free, on-device identification.</p>
+      </div>
+      <div class="card">
+        <div class="tab-controls" role="tablist">
+          <button class="tab-button active" data-tab="api" role="tab" aria-selected="true">Hosted API</button>
+          <button class="tab-button" data-tab="offline" role="tab" aria-selected="false">Offline (TF.js)</button>
+        </div>
+        <div class="tab-panel" id="tab-api" role="tabpanel">
+          <form id="api-form" class="stack" novalidate>
+            <label class="field">
+              <span>API endpoint</span>
+              <input type="url" id="api-endpoint" value="https://api.logmeal.es/v2/image/recognition/complete" required>
+            </label>
+            <label class="field">
+              <span>API key</span>
+              <input type="text" id="api-key" placeholder="Bearer token or header value" required>
+            </label>
+            <label class="field">
+              <span>Ingredient photo</span>
+              <input type="file" id="api-image" accept="image/*" required>
+            </label>
+            <p class="form-help">Uses multipart upload. Works with providers like LogMeal or CalorieMama—paste your issued API key.</p>
+            <button type="submit" class="button primary">Send to API</button>
+          </form>
+          <pre id="api-response" class="response" aria-live="polite"></pre>
+        </div>
+        <div class="tab-panel" id="tab-offline" role="tabpanel" hidden>
+          <div class="stack">
+            <label class="field">
+              <span>Upload an ingredient photo</span>
+              <input type="file" id="offline-image" accept="image/*">
+            </label>
+            <p class="form-help">Runs entirely in the browser using the MobileNet model from TensorFlow.js. Perfect for dorm kitchens without reliable Wi-Fi.</p>
+            <div id="offline-preview" class="preview" role="img" aria-label="Ingredient preview" hidden></div>
+            <div id="offline-status" class="status">Model idle.</div>
+            <ul id="offline-results" class="result-list" aria-live="polite"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pantry-recipes" class="section" aria-labelledby="recipes-title">
+      <div class="section-header">
+        <h2 id="recipes-title">Cook with what you already have</h2>
+        <p>Add ingredients to your pantry and ZotBites will surface student-tested recipes under $5 per serving.</p>
+      </div>
+      <div class="grid grid--2">
+        <div class="card stack">
+          <h3>Your pantry</h3>
+          <form id="pantry-form" class="inline-form" novalidate>
+            <label class="field">
+              <span class="sr-only">Ingredient</span>
+              <input type="text" id="pantry-input" placeholder="e.g. rice" autocomplete="off">
+            </label>
+            <button type="submit" class="button">Add</button>
+            <button type="button" id="clear-pantry" class="button ghost">Clear</button>
+          </form>
+          <ul id="pantry-list" class="chip-list" aria-live="polite"></ul>
+        </div>
+        <div class="card stack">
+          <h3>Filters</h3>
+          <label class="field">
+            <span>Search recipes</span>
+            <input type="search" id="recipe-search" placeholder="Enter a dish or ingredient">
+          </label>
+          <label class="field">
+            <span>Meal type</span>
+            <select id="meal-filter">
+              <option value="all">All</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+              <option value="snack">Snack</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="vegan">Vegan</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div id="recipe-results" class="recipe-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="progress" class="section" aria-labelledby="progress-title">
+      <div class="section-header">
+        <h2 id="progress-title">Stay motivated with gamified learning</h2>
+        <p>Earn XP, streaks, and kitchen badges as you complete lessons and cook new meals.</p>
+      </div>
+      <div class="grid grid--2">
+        <div class="card stack">
+          <h3>Progress tracker</h3>
+          <div class="progress-shell" role="img" aria-label="Experience progress bar">
+            <div id="xp-bar" class="progress-fill"></div>
+          </div>
+          <p id="xp-summary">Create an account to start collecting XP.</p>
+          <div class="streak" id="streak-status">Streak: 0 days</div>
+        </div>
+        <div class="card stack">
+          <h3>Achievements</h3>
+          <ul id="achievement-list" class="result-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="lesson-paths" class="section" aria-labelledby="lesson-title">
+      <div class="section-header">
+        <h2 id="lesson-title">Structured lesson paths</h2>
+        <p>Follow modular lessons inspired by Duolingo-style units. Each completion adds XP and unlocks tougher challenges.</p>
+      </div>
+      <div id="lesson-list" class="lesson-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="favorites" class="section" aria-labelledby="favorites-title">
+      <div class="section-header">
+        <h2 id="favorites-title">Saved favorites</h2>
+        <p>Keep dorm-proof recipes handy for busy weeks.</p>
+      </div>
+      <div id="favorite-list" class="recipe-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="community" class="section" aria-labelledby="community-title">
+      <div class="section-header">
+        <h2 id="community-title">Student recipe submissions</h2>
+        <p>Share your own hacks and budget meals with fellow Anteaters.</p>
+      </div>
+      <div class="grid grid--2">
+        <form id="community-form" class="card stack" novalidate>
+          <h3>Submit a recipe</h3>
+          <label class="field">
+            <span>Recipe title</span>
+            <input type="text" id="community-title-input" required>
+          </label>
+          <label class="field">
+            <span>Key ingredients</span>
+            <input type="text" id="community-ingredients-input" placeholder="comma separated" required>
+          </label>
+          <label class="field">
+            <span>Instructions or tips</span>
+            <textarea id="community-instructions-input" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="button primary">Post to feed</button>
+          <p id="community-feedback" class="form-feedback" role="alert"></p>
+        </form>
+        <div class="card stack">
+          <h3>Community feed</h3>
+          <ul id="community-feed" class="result-list" aria-live="polite"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built for UCI students with ❤️ by the ZotBites team. Feedback? Email <a href="mailto:hello@zotbites.app">hello@zotbites.app</a></p>
+  </footer>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.0"></script>
+  <script defer src="app.js"></script>
+</body>
 </html>
