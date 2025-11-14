@@ -1,70 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
-      <title >
-        Rich's Website
-      </title>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="styles.css">
-    <link href-"index.html">
-    <link href="skill.html">
-    <link href="favorite_video.html">
-    <link href="audio_player.html">
-    
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Rich Chau - builder, creator, and lifelong learner. Explore current work, skills, and ways to connect."
+    />
+    <title>Rich Chau | Home</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  
   <body>
-    
-    <main>
-      
-
-      
-      <section>
-        <a href="index.html">Main Page</a>
-        <a href="skill.html">Skills List</a>
-        <a href="favorite_video.html">Favorite Video</a>
-        <a href="audio_player.html">Audio Player</a>
-      </section>
-      
-
-  
-    <!-- Section1 -->
-      <div class="title">
-        <h1>Rich's website</h1>
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo-mark" aria-hidden="true">RC</div>
+        <div>
+          <p class="brand-eyebrow">Rich Chau</p>
+          <p class="brand-tagline">Creative technologist</p>
+        </div>
       </div>
-      
-    <!-- Social Media-->
-      <section>
-  
-        <p><a target="_blank" href="https://www.instagram.com/rchau8502/"><strong>My Instagram</strong></a></p>
-        <p><a target="_blank" href="https://github.com/rchau8502"><strong>My Github</strong></a></p>
-        
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#connect">Connect</a>
+        <a href="skill.html">Skills</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn ghost" href="favorite_video.html">Favorite Video</a>
+        <a class="btn" href="audio_player.html">Audio Player</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-content">
+          <p class="eyebrow">Always building, always learning</p>
+          <h1>Hi, I'm Rich.</h1>
+          <p class="lead">
+            I ship playful experiments, sharpen technical skills, and document the journey so
+            others can learn along the way.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="skill.html">Explore my skills</a>
+            <a class="btn ghost" href="#connect">Say hello</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <p class="hero-card-label">Latest update</p>
+          <p class="hero-card-title">Audio playground</p>
+          <p>
+            Built a mini player that mixes ambient loops. It's my new go-to focus ritual-try it out
+            to see what I'm experimenting with.
+          </p>
+          <a class="text-link" href="audio_player.html">Open the player -&gt;</a>
+        </div>
       </section>
 
-      <br/>
-      
+      <section class="grid" id="about">
+        <article class="panel">
+          <p class="eyebrow">About</p>
+          <h2>Intentional by design</h2>
+          <p>
+            I'm a curious builder who loves connecting tech with everyday creativity. Whether I'm
+            architecting a new layout, polishing a playlist, or sharing snippets on social, I focus
+            on clear storytelling and delightful details.
+          </p>
+          <a class="text-link" href="audio_player.html">Listen while you scroll -&gt;</a>
+        </article>
+
+        <article class="panel highlight">
+          <p class="eyebrow">Quick stats</p>
+          <ul class="stat-list">
+            <li><span>03</span> active side projects</li>
+            <li><span>12+</span> custom playlists curated</li>
+            <li><span>&infin;</span> curiosity for learning</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="projects" id="projects">
+        <h2>What I'm sharing next</h2>
+        <div class="card-row">
+          <article class="card">
+            <p class="eyebrow">Featured</p>
+            <h3>Skill showcase</h3>
+            <p>
+              A living list of tools, frameworks, and creative mediums I'm practicing this season.
+            </p>
+            <a class="text-link" href="skill.html">Browse my skills -&gt;</a>
+          </article>
+          <article class="card">
+            <p class="eyebrow">Watch</p>
+            <h3>Favorite inspiration</h3>
+            <p>
+              The video that sparked my current build-equal parts art, motion, and storytelling.
+            </p>
+            <a class="text-link" href="favorite_video.html">Play the video -&gt;</a>
+          </article>
+          <article class="card">
+            <p class="eyebrow">Listen</p>
+            <h3>Audio experiments</h3>
+            <p>
+              Mixing loops, capturing ambient sounds, and turning them into focus fuel.
+            </p>
+            <a class="text-link" href="audio_player.html">Visit the studio -&gt;</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="connect" id="connect">
+        <div>
+          <p class="eyebrow">Connect</p>
+          <h2>Let's build something fun</h2>
+          <p>
+            I'm sharing progress, playlists, and prototypes across the web. Reach out if a project
+            sparks an idea.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/rchau8502" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.instagram.com/rchau8502/" target="_blank" rel="noopener"
+              >Instagram</a
+            >
+            <a href="mailto:rchau8502@gmail.com">Email me</a>
+          </div>
+        </div>
+        <div class="connect-card">
+          <img
+            class="image"
+            id="catphoto"
+            src="https://i.imgur.com/urNSsbD.png"
+            alt="Playful illustration of a cat with headphones"
+          />
+          <p class="caption">
+            A friendly mascot that shows up in my sketchbook between iterations.
+          </p>
+        </div>
+      </section>
     </main>
-    
-    <br/>
-    
-    <footer>
-      
-      <img class="image" id="catphoto" src="https://i.imgur.com/urNSsbD.png" >
-       
-      
-      
-      
-        
-      <p>Made by <strong>Rich Chau</strong></p>
-      
+
+    <footer class="site-footer">
+      <p>Made by <strong>Rich Chau</strong> &middot; <a href="#top">Back to top</a></p>
     </footer>
-    
   </body>
-  
 </html>
