@@ -1,72 +1,56 @@
-### My Homepage
+## Rich's Homepage
 
-<table>
-  <tr>
-    <td valign="center">
-        <br/>
-        🚀 &nbsp; My site：<a href="https://hau6.top" target="_blank">Rich's website</a>
-        <br/>
-        💞️ &nbsp; My discord: RichC02
-        <br/>
-   
-    
+This repo powers my personal homepage and skill showcase: <https://hau6.top>. Everything in the site
+is plain HTML + CSS so you can inspect or remix it easily.
 
-<br/>
+### What’s inside
 
+- **Sticky hero + jump nav** for fast access to About, Now, Journey, Notes, Connect, and Skills.
+- **Now board** that broadcasts what I’m building, learning, and documenting right now.
+- **Projects + timeline cards** spotlight the evolving skills list, a public build journal, and key
+  milestones from each year.
+- **Notes panel** summarizing design decisions, like the switch to a light “Miku blue” palette and
+  layered gradients.
+- **Connect section** with GitHub, Instagram, email links, and my headphone-wearing cat mascot.
 
-<summary>
+### Stack
 
-### I'm also learning 2D Animations 
+- `index.html`
+- `styles.css` (custom properties for the aqua theme, responsive grid utilities)
 
-![LOGO](https://github.com/RCHau6/Website/blob/main/Ghost_Motion_Final_1.gif)
-  
+No frameworks, bundlers, or build steps.
 
+### Develop locally
 
-</summary>
- 
-<summary>
-  
-### 🌱 My Skillsets 
+```bash
+git clone https://github.com/rchau8502/HomePage.git
+cd HomePage
+start index.html  # Windows
+# or: open index.html in your favorite browser
+```
 
-<br/>
+Edit the HTML/CSS, refresh the browser, and commit once things feel right.
 
-### Languages That I Currently Use
+### Skill snapshot
 
-[![Python](https://img.shields.io/badge/-Python-141414?style=flat&logo=python)](https://www.python.org/)
-[![Java](https://img.shields.io/badge/-Java-141414?style=flat&logo=openjdk)](https://adoptium.net/)
-![HTML](https://img.shields.io/badge/-HTML-141414?style=flat&logo=html5)
-![CSS](https://img.shields.io/badge/-CSS-141414?style=flat&logo=css3)
-![C++](https://img.shields.io/badge/-C++-141414?style=flat&logo=c%2B%2B)
-![PowerShell](https://img.shields.io/badge/-PowerShell-141414?style=flat&logo=PowerShell)
+| Daily drivers                 | Currently learning              | Up next                    |
+| ----------------------------- | ------------------------------- | -------------------------- |
+| HTML, CSS, Python, Java       | JavaScript, TypeScript, Rust    | Elixir, C#, Go, Clojure    |
+| C++, PowerShell, design tools | Kotlin, motion/2D animation     | More creative coding tools |
 
-### Languages that I am learning or have started
+Tools I lean on: VS Code, Windows Terminal, GitHub, Discord (`RichC02`), Adobe Premiere/After
+Effects/Photoshop, Replit.
 
-[![JavaScript](https://img.shields.io/badge/-JavaScript-141414?style=flat&logo=javascript)](https://www.javascript.com/)
-[![TypeScript](https://img.shields.io/badge/-TypeScript-141414?style=flat&logo=typescript)](https://www.typescriptlang.org/)
-[![Rust](https://img.shields.io/badge/-Rust-141414?style=flat&logo=rust)](https://www.rust-lang.org/)
-[![Kotlin](https://img.shields.io/badge/-Kotlin-141414?style=flat&logo=kotlin)](https://kotlinlang.org/)
-![C](https://img.shields.io/badge/-C-141414?style=flat&logo=c)
+### Animation experiments
 
-### Planned Languages to Learn
+I’m also teaching myself 2D animation. The ghost loop below appears on the site’s connect card:
 
-[![elixir](https://img.shields.io/badge/-Elixir-141414?style=flat&logo=elixir)](https://elixir-lang.org/)
-[![C#](https://img.shields.io/badge/-C%23-141414?style=flat&logo=csharp)](https://docs.microsoft.com/en-us/dotnet/csharp/)
-[![Go](https://img.shields.io/badge/-Go-141414?style=flat&logo=go)](https://go.dev/)
-![Clojure](https://img.shields.io/badge/-Clojure-141414?style=flat&logo=clojure)
+![Ghost animation](https://github.com/RCHau6/Website/blob/main/Ghost_Motion_Final_1.gif)
 
-### Tools and Tech that I use
+### Connect
 
-[![VS Code](https://img.shields.io/badge/-Visual%20Studio%20Code-141414?style=flat&logo=visual-studio-code&logoColor=007ACC)](https://code.visualstudio.com/)
-[![Windows Terminal](https://img.shields.io/badge/-Windows%20Terminal-141414?style=flat&logo=windows%20terminal)](https://github.com/microsoft/terminal)
-[![Windows](https://img.shields.io/badge/-Windows-141414?style=flat&logo=windows)](https://www.microsoft.com/en-us/windows/)
-[![Github](https://img.shields.io/badge/-Github-141414?style=flat&logo=github)](https://github.com)
-[![Discord](https://img.shields.io/badge/-Discord-141414?style=flat&logo=discord)](https://discord.com)
-[![Adobe Premiere Pro](https://img.shields.io/badge/-Adobe%20Premiere%20Pro-141414?style=flat&logo=adobepremierepro)]()
-[![Adobe After Effects](https://img.shields.io/badge/-Adobe%20After%20Effects-141414?style=flat&logo=adobeaftereffects)]()
-[![Adobe Photoshop](https://img.shields.io/badge/-Adobe%20Photoshop-141414?style=flat&logo=adobephotoshop)]()
-[![Repl.it](https://img.shields.io/badge/-Repl.it-141414?style=flat&logo=replit)](https://replit.com/)
+- Website: <https://hau6.top>
+- GitHub: <https://github.com/rchau8502>
+- Discord: **RichC02**
 
----
-
-
-</summary>
+If you use this layout for your own site, let me know—I’d love to see what you build.
