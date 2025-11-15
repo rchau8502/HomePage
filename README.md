@@ -1,8 +1,7 @@
 ## Rich's Homepage
 
 This is my space on the web: <https://rchau8502.github.io/HomePage/>. It's a living journal of what
-I'm building, how my skills evolve, and the vibes that inspire me. No templates, no
-instructions—just a showcase of my work.
+I'm building, how my skills evolve, and the vibes that inspire me. 
 
 ### What you'll see
 
