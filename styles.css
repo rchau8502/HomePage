@@ -238,16 +238,11 @@ main {
   margin-top: 1rem;
 }
 
-.focus,
 .skills-preview {
   padding: 2rem;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background-color: var(--surface);
-}
-
-.focus .card-row {
-  margin-top: 1.25rem;
 }
 
 .skill-grid {
@@ -293,29 +288,6 @@ main {
   font-weight: 700;
   margin-right: 0.5rem;
   color: var(--text);
-}
-
-.card-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.card {
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background-color: var(--surface-2);
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-2);
-}
-
-.card h3 {
-  margin: 0.4rem 0 0.6rem;
 }
 
 .timeline {
@@ -440,7 +412,6 @@ main {
   }
 
   .timeline,
-  .focus,
   .skills-preview {
     padding: 1.5rem;
   }
