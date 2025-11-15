@@ -167,6 +167,10 @@ main {
   box-shadow: 0 40px 120px rgba(93, 150, 203, 0.25);
 }
 
+.skills-hero {
+  align-items: center;
+}
+
 .hero h1 {
   margin: 0 0 0.75rem;
   font-size: clamp(2.25rem, 5vw, 3rem);
@@ -263,6 +267,33 @@ main {
   color: var(--muted);
 }
 
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.badge-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(63, 224, 255, 0.15);
+  border: 1px solid rgba(63, 224, 255, 0.35);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
 .stat-list {
   list-style: none;
   padding: 0;
@@ -283,6 +314,33 @@ main {
 
 .projects h2 {
   margin: 0 0 1.5rem;
+}
+
+.fandom {
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.anime-grid article {
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background-color: var(--surface-2);
+}
+
+.anime-grid h3 {
+  margin-top: 0;
+}
+
+.anime-grid ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
 }
 
 .card-row {
@@ -360,6 +418,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+.skills-notes {
+  gap: 2rem;
 }
 
 .notes-header {
