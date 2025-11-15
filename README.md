@@ -3,14 +3,6 @@
 This is my space on the web: <https://rchau8502.github.io/HomePage/>. It's a living journal of what
 I'm building, how my skills evolve, and the vibes that inspire me. 
 
-### What you'll see
-
-- **Hero snapshot** telling you who I am and what I'm focused on.
-- **Highlights** showing proof of progress (commits, shipped experiments, community updates).
-- **Skill map** that links to the dedicated stack page.
-- **Timeline** with yearly milestones.
-- **Connect** block with GitHub, Instagram, and my headphone-wearing cat mascot.
-
 ### Current tools
 
 | Daily drivers                 | Learning now                | On deck            |
