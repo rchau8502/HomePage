@@ -1,56 +1,27 @@
 ## Rich's Homepage
 
-This repo powers my personal homepage and skill showcase: <https://hau6.top>. Everything in the site
-is plain HTML + CSS so you can inspect or remix it easily.
+This is my space on the web: <https://rchau8502.github.io/HomePage/>. It's a living journal of what
+I'm building, how my skills evolve, and the vibes that inspire me. No templates, no
+instructions—just a showcase of my work.
 
-### What’s inside
+### What you'll see
 
-- **Sticky hero + jump nav** for fast access to About, Now, Journey, Notes, Connect, and Skills.
-- **Now board** that broadcasts what I’m building, learning, and documenting right now.
-- **Projects + timeline cards** spotlight the evolving skills list, a public build journal, and key
-  milestones from each year.
-- **Notes panel** summarizing design decisions, like the switch to a light “Miku blue” palette and
-  layered gradients.
-- **Connect section** with GitHub, Instagram, email links, and my headphone-wearing cat mascot.
+- **Hero snapshot** telling you who I am and what I'm focused on.
+- **Highlights** showing proof of progress (commits, shipped experiments, community updates).
+- **Skill map** that links to the dedicated stack page.
+- **Timeline** with yearly milestones.
+- **Connect** block with GitHub, Instagram, and my headphone-wearing cat mascot.
 
-### Stack
+### Current tools
 
-- `index.html`
-- `styles.css` (custom properties for the aqua theme, responsive grid utilities)
+| Daily drivers                 | Learning now                | On deck            |
+| ----------------------------- | --------------------------- | ------------------ |
+| HTML, CSS, Python, Java       | JavaScript, TypeScript, Rust| Elixir, C#, Go     |
+| C++, PowerShell, design tools | Kotlin, motion/2D animation | Clojure, more R&D  |
 
-No frameworks, bundlers, or build steps.
-
-### Develop locally
-
-```bash
-git clone https://github.com/rchau8502/HomePage.git
-cd HomePage
-start index.html  # Windows
-# or: open index.html in your favorite browser
-```
-
-Edit the HTML/CSS, refresh the browser, and commit once things feel right.
-
-### Skill snapshot
-
-| Daily drivers                 | Currently learning              | Up next                    |
-| ----------------------------- | ------------------------------- | -------------------------- |
-| HTML, CSS, Python, Java       | JavaScript, TypeScript, Rust    | Elixir, C#, Go, Clojure    |
-| C++, PowerShell, design tools | Kotlin, motion/2D animation     | More creative coding tools |
-
-Tools I lean on: VS Code, Windows Terminal, GitHub, Discord (`RichC02`), Adobe Premiere/After
-Effects/Photoshop, Replit.
-
-### Animation experiments
-
-I’m also teaching myself 2D animation. The ghost loop below appears on the site’s connect card:
+Outside of coding I tinker with Premiere/After Effects/Photoshop, groove through playlists, and
+share snippets on Discord (`RichC02`).
 
 ![Ghost animation](https://github.com/RCHau6/Website/blob/main/Ghost_Motion_Final_1.gif)
 
-### Connect
-
-- Website: <https://hau6.top>
-- GitHub: <https://github.com/rchau8502>
-- Discord: **RichC02**
-
-If you use this layout for your own site, let me know—I’d love to see what you build.
+Thanks for checking it out! If you want to collaborate or say hi, my links are on the homepage.
