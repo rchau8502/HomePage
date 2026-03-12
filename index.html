@@ -1,161 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Rich Chau - Creative Technologist. Explore current work, skills, and projects."
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rich Chau - Creative Technologist. Explore current work, skills, and projects.">
     <title>Rich Chau | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     
-    <header class="site-header">
-      <div class="brand">
-        <div class="logo-mark" aria-hidden="true">RC</div>
-        <div class="brand-text">
-          <p class="brand-name">Rich Chau</p>
-          <p class="brand-role">@rchau8502</p>
-        </div>
-      </div>
-      <nav class="primary-nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#projects">Work</a>
-        <a href="#skills">Skills</a>
-        <a href="#connect">Connect</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="btn ghost" href="skill.html">Stack Details</a>
-        <a class="btn primary" href="https://github.com/rchau8502" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </header>
+    <div class="background-effects">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </div>
 
-    <main>
-      <section class="hero" id="top">
-        <div class="hero-content">
-          <p class="eyebrow">Creative Technologist & Builder</p>
-          <h1>Hi, I'm <span class="gradient-text">Rich Chau</span>.</h1>
-          <p class="lead">
-            I blend software engineering with anime-inspired aesthetics to build delightful, interactive experiences. Always prototyping, learning, and shipping new ideas to the web.
-          </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#projects">View Latest Work</a>
-            <a class="btn ghost" href="#connect">Get in Touch</a>
-          </div>
+    <nav class="floating-nav">
+        <div class="nav-brand">RC</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="skill.html">Skills</a>
+            <a href="https://github.com/rchau8502" target="_blank" rel="noopener">GitHub</a>
         </div>
-        <div class="hero-visual">
-          <div class="glass-card profile-card">
-            <div class="card-glow"></div>
-            <img src="https://i.imgur.com/urNSsbD.png" alt="Mascot" class="profile-avatar floating">
-            <div class="profile-info">
-              <h3>Currently Focused On</h3>
-              <p>AI integrations, full-stack development, and motion design.</p>
-              <a href="https://github.com/rchau8502" class="text-link" target="_blank" rel="noopener">Follow my journey -></a>
-            </div>
-          </div>
-        </div>
-      </section>
+    </nav>
 
-      <section class="projects" id="projects">
-        <div class="section-header">
-          <p class="eyebrow">Featured Work</p>
-          <h2>Recent Projects</h2>
-        </div>
-        <div class="project-grid">
-          
-          <article class="glass-card project-card">
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="tag glow">AI Assistant</span>
-                <span class="tag">Next.js</span>
-              </div>
-              <h3>ZotFood</h3>
-              <p>
-                An intelligent, AI-driven culinary assistant. Features include automated pantry tracking, recipe generation, and meal planning to eliminate food waste.
-              </p>
-              <div class="project-links">
-                <a href="https://zotfood.vercel.app" class="btn primary small" target="_blank" rel="noopener">Live Demo</a>
-              </div>
-            </div>
-            <div class="project-bg decoration-1"></div>
-          </article>
-
-          <article class="glass-card project-card">
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="tag glow-accent">Data Vis</span>
-                <span class="tag">Streamlit</span>
-              </div>
-              <h3>Anime Dojo</h3>
-              <p>
-                An interactive and data-driven platform tracking anime statistics dynamically. Beautiful visual summaries of the season's hottest shows.
-              </p>
-              <div class="project-links">
-                <a href="https://anime-dojo.streamlit.app" class="btn primary small" target="_blank" rel="noopener">Live Demo</a>
-              </div>
-            </div>
-            <div class="project-bg decoration-2"></div>
-          </article>
-
-        </div>
-      </section>
-
-      <section class="about-skills" id="about">
-        <div class="glass-card about-panel">
-          <p class="eyebrow">Background</p>
-          <h2>Developer Program Member</h2>
-          <p>
-            With a focus on automation and engaging user interfaces, I build projects that are both functional and visually captivating. I frequently share updates and my code openly to help others learn along the way.
-          </p>
-          <ul class="stat-list">
-            <li><span class="stat-number">2+</span> Active Projects</li>
-            <li><span class="stat-number">100%</span> Open Source</li>
-          </ul>
-        </div>
+    <main class="bento-container">
         
-        <div class="glass-card skills-panel" id="skills">
-          <p class="eyebrow">Technical Arsenal</p>
-          <h2>Core Technologies</h2>
-          <div class="badge-grid">
-            <span class="skill-badge">TypeScript</span>
-            <span class="skill-badge">Python</span>
-            <span class="skill-badge">React & Next.js</span>
-            <span class="skill-badge">Tailwind CSS</span>
-            <span class="skill-badge">PostgreSQL</span>
-            <span class="skill-badge">Streamlit</span>
-            <span class="skill-badge">Java & C++</span>
-            <span class="skill-badge">Motion Design</span>
-          </div>
-          <div class="spacer"></div>
-          <a class="text-link" href="skill.html">Dive deeper into my stack -></a>
-        </div>
-      </section>
+        <!-- Hero Cell -->
+        <article class="bento-cell cell-hero col-span-2 row-span-2">
+            <div class="hero-content">
+                <span class="badge">Creative Technologist</span>
+                <h1>Crafting digital experiences with <span class="highlight">precision</span> and <span class="highlight-alt">playfulness</span>.</h1>
+                <p>Hi, I'm Rich Chau. I build intelligent tools, sleek interfaces, and experiment with motion design.</p>
+                <a href="#projects" class="action-btn">Explore my work &rarr;</a>
+            </div>
+            <div class="hero-graphic">
+               <!-- Animated rings -->
+               <div class="ring ring-1"></div>
+               <div class="ring ring-2"></div>
+               <div class="ring ring-3"></div>
+               <img src="https://i.imgur.com/urNSsbD.png" alt="Mascot" class="hero-avatar">
+            </div>
+        </article>
 
-      <section class="connect" id="connect">
-        <div class="connect-content">
-          <h2>Let's build something extraordinary</h2>
-          <p>
-            Whether it's an app idea, a collaboration, or just geeking out about the latest anime season, I'd love to chat.
-          </p>
-          <div class="social-links">
-            <a href="https://github.com/rchau8502" target="_blank" rel="noopener" class="glass-btn">GitHub</a>
-            <a href="https://www.instagram.com/rchau8502/" target="_blank" rel="noopener" class="glass-btn">Instagram</a>
-          </div>
-        </div>
-      </section>
+        <!-- ZotFood Project Cell -->
+        <article class="bento-cell cell-project bg-zotfood col-span-1 row-span-2" id="projects">
+            <div class="project-info">
+                <div class="project-header">
+                    <span class="pill">AI Assistant</span>
+                    <a href="https://zotfood.vercel.app" class="visit-link" target="_blank" rel="noopener">&#8599;</a>
+                </div>
+                <h2>ZotFood</h2>
+                <p>AI-driven culinary assistant for automated pantry tracking & recipe generation.</p>
+                <div class="tech-stack">
+                    <span>Next.js</span>
+                    <span>AI</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Anime Dojo Project Cell -->
+        <article class="bento-cell cell-project bg-dojo col-span-1 row-span-1">
+            <div class="project-info">
+                <div class="project-header">
+                    <span class="pill">Data Vis</span>
+                    <a href="https://anime-dojo.streamlit.app" class="visit-link" target="_blank" rel="noopener">&#8599;</a>
+                </div>
+                <h2>Anime Dojo</h2>
+                <p>Dynamic data visualization platform for anime statistics.</p>
+                <div class="tech-stack">
+                    <span>Streamlit</span>
+                    <span>Python</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Stats Cell -->
+        <article class="bento-cell cell-stats col-span-1 row-span-1">
+            <div class="stat-box">
+                <span class="stat-value">12+</span>
+                <span class="stat-label">Projects Shipped</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">&infin;</span>
+                <span class="stat-label">Curiosity</span>
+            </div>
+        </article>
+
+        <!-- Skills Summary Cell -->
+        <article class="bento-cell cell-skills col-span-2 row-span-1">
+            <div class="skills-content">
+                <h3>Technical Arsenal</h3>
+                <div class="marquee">
+                    <div class="marquee-content">
+                        <span>TypeScript</span> &bull; <span>Python</span> &bull; <span>Next.js</span> &bull; 
+                        <span>PostgreSQL</span> &bull; <span>Streamlit</span> &bull; <span>Rust</span> &bull;
+                        <span>Motion Design</span> &bull; <span>Java</span> &bull;
+                    </div>
+                </div>
+                <a href="skill.html" class="subtle-link">View Full Stack Details &rarr;</a>
+            </div>
+        </article>
+
+        <!-- Connect Cell -->
+        <article class="bento-cell cell-connect col-span-1 row-span-1">
+            <h3>Let's Connect</h3>
+            <p>Always open to discussing new projects or ideas.</p>
+            <div class="social-grid">
+                <a href="https://github.com/rchau8502" target="_blank" rel="noopener" class="social-btn">GitHub</a>
+                <a href="https://www.instagram.com/rchau8502/" target="_blank" rel="noopener" class="social-btn">Instagram</a>
+            </div>
+        </article>
+
+        <!-- About Cell -->
+        <article class="bento-cell cell-about col-span-1 row-span-1" id="about">
+            <div class="about-content">
+                <h3>GitHub Developer Program</h3>
+                <p>Sharing progress, playlists, and prototypes across the web. I document the journey so others can learn.</p>
+            </div>
+            <div class="aesthetic-dots"></div>
+        </article>
+
     </main>
 
-    <footer class="site-footer">
-      <p>
-        Crafted with <span class="accent-text">♥</span> by <strong>Rich Chau</strong> &middot; <a href="#top">Back to top</a>
-      </p>
+    <footer class="minimal-footer">
+        <p>Designed and built by Rich Chau. &copy; 2026</p>
     </footer>
-  </body>
+
+</body>
 </html>
