@@ -608,6 +608,15 @@ h3 {
   margin-bottom: 1rem;
 }
 
+.company-url {
+  margin: 0.6rem 0 1rem;
+  color: var(--accent-cool);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 0.84rem;
+  word-break: break-all;
+}
+
 .story-grid {
   align-items: center;
 }
