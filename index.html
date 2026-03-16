@@ -29,6 +29,7 @@
         <a href="#about">About</a>
         <a href="#now">Now</a>
         <a href="#projects">Projects</a>
+        <a href="#proof">Proof</a>
         <a href="#fandom">Fandom</a>
         <a href="#journey">Journey</a>
         <a href="#notes">Notes</a>
@@ -43,8 +44,8 @@
       </div>
     </header>
 
-    <main class="site-shell">
-      <section class="hero" id="top">
+    <main class="site-shell" id="top-content">
+      <section class="hero reveal delay-1" id="top">
         <div class="hero-content hero-copy">
           <p class="eyebrow">Rich Chau / Creative Technologist</p>
           <h1>
@@ -60,6 +61,12 @@
             <a class="btn ghost" href="https://github.com/rchau8502" target="_blank" rel="noopener"
               >Open GitHub</a
             >
+          </div>
+          <div class="hero-status" aria-label="Current operating status">
+            <span><strong>Availability</strong>Open for freelance builds</span>
+            <span><strong>Location</strong>California / remote-first</span>
+            <span><strong>Current focus</strong>Homepage and portfolio systems</span>
+            <span><strong>Reply speed</strong>Usually within 24 hours</span>
           </div>
           <ul class="mini-proof">
             <li><span>UI</span> Editorial layouts over generic templates</li>
@@ -108,7 +115,7 @@
         </div>
       </section>
 
-      <section class="section-grid" id="about">
+      <section class="section-grid reveal delay-2" id="about">
         <article class="panel section-copy">
           <p class="eyebrow">About</p>
           <h2>Builder with a strong eye for vibe, rhythm, and usability.</h2>
@@ -142,7 +149,7 @@
         </article>
       </section>
 
-      <section class="section-block" id="now">
+      <section class="section-block reveal delay-3" id="now">
         <div class="section-intro">
           <p class="eyebrow">Now</p>
           <h2>What I am sharpening right now</h2>
@@ -176,7 +183,7 @@
         </div>
       </section>
 
-      <section class="section-block" id="projects">
+      <section class="section-block reveal delay-4" id="projects">
         <div class="section-intro">
           <p class="eyebrow">Projects</p>
           <h2>Selected work with distinct personalities</h2>
@@ -238,7 +245,7 @@
         </div>
       </section>
 
-      <section class="section-grid story-grid" id="fandom">
+      <section class="section-grid story-grid reveal delay-5" id="fandom">
         <article class="panel story-copy">
           <p class="eyebrow">Fandom</p>
           <h2>Anime, playlists, and motion loops keep the work from going flat.</h2>
@@ -266,7 +273,7 @@
         </article>
       </section>
 
-      <section class="timeline section-block" id="journey">
+      <section class="timeline section-block reveal delay-6" id="journey">
         <div class="section-intro">
           <p class="eyebrow">Journey</p>
           <h2>Recent milestones in public</h2>
@@ -305,7 +312,44 @@
         </ul>
       </section>
 
-      <section class="notes section-block" id="notes">
+      <section class="section-block proof-block reveal delay-7" id="proof">
+        <div class="section-intro">
+          <p class="eyebrow">Proof</p>
+          <h2>Signals that this is active, not a static portfolio shell</h2>
+          <p>
+            I build and refine in public. These cards highlight the collaboration style and output
+            quality people usually notice first.
+          </p>
+        </div>
+        <div class="proof-grid">
+          <article class="proof-card panel">
+            <p class="proof-tag">Build Quality</p>
+            <h3>Fast design-to-code cycles</h3>
+            <p>
+              Most iterations happen in one or two focused passes with visual changes shipped the
+              same day.
+            </p>
+          </article>
+          <article class="proof-card panel">
+            <p class="proof-tag">Collaboration</p>
+            <h3>Clear communication loop</h3>
+            <p>
+              I keep project updates direct and practical so feedback stays short and implementation
+              stays predictable.
+            </p>
+          </article>
+          <article class="proof-card panel">
+            <p class="proof-tag">Ownership</p>
+            <h3>From direction to deployment</h3>
+            <p>
+              Strategy, visual language, code implementation, and GitHub publishing all handled in
+              one workflow.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="notes section-block reveal delay-8" id="notes">
         <div class="section-intro">
           <p class="eyebrow">Notes</p>
           <h2>Rules I keep returning to</h2>
@@ -335,7 +379,7 @@
         </div>
       </section>
 
-      <section class="section-grid connect" id="connect">
+      <section class="section-grid connect reveal delay-9" id="connect">
         <article class="panel section-copy">
           <p class="eyebrow">Connect</p>
           <h2>Open to collaborations, ideas, and interesting side quests.</h2>
@@ -375,5 +419,50 @@
         <a href="https://github.com/rchau8502/HomePage" target="_blank" rel="noopener">Site repo</a>
       </p>
     </footer>
+    <script>
+      (() => {
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const revealItems = document.querySelectorAll(".reveal");
+
+        if (reduceMotion || !("IntersectionObserver" in window)) {
+          revealItems.forEach((item) => item.classList.add("is-visible"));
+        } else {
+          const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              });
+            },
+            { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
+          );
+          revealItems.forEach((item) => revealObserver.observe(item));
+        }
+
+        const navLinks = [...document.querySelectorAll('.primary-nav a[href^="#"]')];
+        const navSections = navLinks
+          .map((link) => document.querySelector(link.getAttribute("href")))
+          .filter(Boolean);
+
+        if (!navSections.length || !("IntersectionObserver" in window)) return;
+
+        const sectionObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              const id = entry.target.getAttribute("id");
+              navLinks.forEach((link) => {
+                const active = link.getAttribute("href") === "#" + id;
+                link.classList.toggle("is-active", active);
+              });
+            });
+          },
+          { threshold: 0.45, rootMargin: "-15% 0px -45% 0px" }
+        );
+
+        navSections.forEach((section) => sectionObserver.observe(section));
+      })();
+    </script>
   </body>
 </html>

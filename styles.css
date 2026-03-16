@@ -201,6 +201,11 @@ h3 {
   outline: none;
 }
 
+.primary-nav a.is-active {
+  color: #10151c;
+  background: linear-gradient(135deg, var(--accent), #ffd4a1);
+}
+
 .nav-actions {
   gap: 10px;
 }
@@ -255,9 +260,60 @@ h3 {
 .skill-grid,
 .focus-grid,
 .project-grid,
-.notes-grid {
+.notes-grid,
+.proof-grid {
   display: grid;
   gap: 24px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 480ms ease,
+    transform 480ms ease;
+  transition-delay: var(--delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 {
+  --delay: 40ms;
+}
+
+.delay-2 {
+  --delay: 70ms;
+}
+
+.delay-3 {
+  --delay: 100ms;
+}
+
+.delay-4 {
+  --delay: 130ms;
+}
+
+.delay-5 {
+  --delay: 160ms;
+}
+
+.delay-6 {
+  --delay: 190ms;
+}
+
+.delay-7 {
+  --delay: 220ms;
+}
+
+.delay-8 {
+  --delay: 250ms;
+}
+
+.delay-9 {
+  --delay: 280ms;
 }
 
 .hero {
@@ -307,6 +363,32 @@ h3 {
 .chip-row,
 .social-links {
   gap: 12px;
+}
+
+.hero-status {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 1.2rem 0;
+}
+
+.hero-status span {
+  padding: 0.78rem 0.86rem;
+  border: 1px solid rgba(255, 245, 232, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  font-size: 0.83rem;
+  line-height: 1.35;
+}
+
+.hero-status strong {
+  display: block;
+  margin-bottom: 0.24rem;
+  color: var(--text);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .mini-proof,
@@ -612,6 +694,26 @@ h3 {
   align-items: center;
 }
 
+.proof-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.proof-card {
+  min-height: 200px;
+}
+
+.proof-tag {
+  display: inline-flex;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid rgba(255, 245, 232, 0.14);
+  border-radius: 999px;
+  margin-bottom: 0.9rem;
+  color: var(--accent-cool);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
 .story-media {
   display: flex;
   flex-direction: column;
@@ -742,7 +844,8 @@ h3 {
   .project-grid,
   .skill-grid,
   .focus-grid,
-  .notes-grid {
+  .notes-grid,
+  .proof-grid {
     grid-template-columns: 1fr;
   }
 
@@ -751,8 +854,9 @@ h3 {
   }
 
   .mini-proof,
+  .hero-status,
   .stat-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -776,6 +880,7 @@ h3 {
   }
 
   .mini-proof,
+  .hero-status,
   .stat-grid,
   .timeline-list li {
     grid-template-columns: 1fr;
