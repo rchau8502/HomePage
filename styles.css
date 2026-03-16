@@ -145,6 +145,15 @@ h3 {
   letter-spacing: -0.06em;
   background: linear-gradient(135deg, var(--accent), var(--accent-cool));
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
 }
 
 .brand-eyebrow {
