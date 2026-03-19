@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rchau8502.github.io/HomePage/sitemap.xml

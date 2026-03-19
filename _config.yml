@@ -1,5 +1,7 @@
-title: Hau6's homepage
-description: Bookmark this to keep an eye on my project updates!
+title: Rich Chau | Creative Technologist
+description: Rich Chau builds playful interfaces, automation experiments, and motion-driven web experiences.
+url: https://rchau8502.github.io
+baseurl: /HomePage
 
 kramdown:
   input: Kramdown

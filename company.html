@@ -8,6 +8,30 @@
       name="description"
       content="Rich Labs designs and builds web interfaces, automation tools, and branded digital experiences."
     />
+    <meta name="theme-color" content="#090d12" />
+    <link rel="canonical" href="https://rchau8502.github.io/HomePage/company.html" />
+    <link rel="icon" type="image/png" href="profile-avatar-256.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rich Labs | Company" />
+    <meta
+      property="og:description"
+      content="Rich Labs designs and builds web interfaces, automation tools, and branded digital experiences."
+    />
+    <meta property="og:url" content="https://rchau8502.github.io/HomePage/company.html" />
+    <meta
+      property="og:image"
+      content="https://rchau8502.github.io/HomePage/profile-avatar-256.png"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Rich Labs | Company" />
+    <meta
+      name="twitter:description"
+      content="Rich Labs designs and builds web interfaces, automation tools, and branded digital experiences."
+    />
+    <meta
+      name="twitter:image"
+      content="https://rchau8502.github.io/HomePage/profile-avatar-256.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,14 +41,16 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="brand">
         <div class="logo-mark">
           <img
             class="profile-avatar"
-            src="https://github.com/rchau8502.png"
+            src="profile-avatar-256.png"
             alt="Rich Chau GitHub profile picture"
-            loading="lazy"
+            width="52"
+            height="52"
           />
         </div>
         <div>
@@ -45,7 +71,7 @@
       </div>
     </header>
 
-    <main class="site-shell">
+    <main class="site-shell" id="main-content">
       <section class="hero" id="top">
         <div class="hero-content">
           <p class="eyebrow">Company Page Demo</p>
@@ -204,20 +230,60 @@
           <p class="eyebrow">Contact</p>
           <h2>Ready to turn this into your real company page?</h2>
           <p>
-            Replace the placeholder copy with your company details, then connect your preferred
-            contact channel for incoming leads.
+            Use the form for inbound project requests, or email directly if you already know the
+            scope.
           </p>
-          <div class="social-links">
-            <a href="mailto:rich.chao288@gmail.com">rich.chao288@gmail.com</a>
-            <a href="index.html">Back to homepage</a>
-            <a href="skill.html">Skill map</a>
-          </div>
+          <form
+            class="contact-form"
+            action="https://formsubmit.co/rich.chao288@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New website inquiry from Rich Labs" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://rchau8502.github.io/HomePage/company.html?submitted=1"
+            />
+            <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off" />
+            <div class="form-grid">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+            </div>
+            <label>
+              <span>Project type</span>
+              <input type="text" name="project_type" placeholder="Landing page, redesign, portfolio, etc." />
+            </label>
+            <label>
+              <span>Project details</span>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="What are you building, what is the timeline, and what should this site do?"
+                required
+              ></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="btn" type="submit">Send inquiry</button>
+              <a class="btn ghost" href="mailto:rich.chao288@gmail.com">Email directly</a>
+            </div>
+          </form>
         </article>
         <article class="panel connect-card">
           <p class="hero-card-label">Location + Availability</p>
           <h3>Remote-first, US-friendly time zones</h3>
           <p>Accepting new company website builds for next month.</p>
           <p class="meta">Typical kickoff: within 7 days after scope approval.</p>
+          <div class="social-links">
+            <a href="index.html">Back to homepage</a>
+            <a href="skill.html">Skill map</a>
+          </div>
         </article>
       </section>
     </main>
