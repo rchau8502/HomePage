@@ -58,22 +58,31 @@
           <p class="brand-tagline">Creative technologist</p>
         </div>
       </div>
-      <nav class="primary-nav" aria-label="Primary">
-        <a href="index.html#about">About</a>
-        <a href="index.html#now">Now</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#fandom">Fandom</a>
-        <a href="index.html#journey">Journey</a>
-        <a href="index.html#notes">Notes</a>
-        <a href="company.html">Company</a>
-        <a href="index.html#connect">Connect</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="btn ghost" href="company.html">Company</a>
-        <a class="btn ghost" href="https://github.com/rchau8502" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="https://github.com/rchau8502/HomePage" target="_blank" rel="noopener"
-          >Site repo</a
-        >
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-lines" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <div class="header-menu" id="site-menu">
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="index.html#about">About</a>
+          <a href="index.html#now">Now</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#fandom">Fandom</a>
+          <a href="index.html#journey">Journey</a>
+          <a href="index.html#notes">Notes</a>
+          <a href="company.html">Company</a>
+          <a href="index.html#connect">Connect</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn ghost" href="company.html">Company</a>
+          <a class="btn ghost" href="https://github.com/rchau8502" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://github.com/rchau8502/HomePage" target="_blank" rel="noopener"
+            >Site repo</a
+          >
+        </div>
       </div>
     </header>
 
@@ -190,5 +199,40 @@
         <a href="https://github.com/rchau8502/HomePage" target="_blank" rel="noopener">Site repo</a>
       </p>
     </footer>
+    <script>
+      (() => {
+        const header = document.querySelector(".site-header");
+        const navToggle = document.querySelector(".nav-toggle");
+        const menu = document.querySelector(".header-menu");
+        const mobileQuery = window.matchMedia("(max-width: 760px)");
+
+        const closeMenu = () => {
+          if (!header || !navToggle) return;
+          header.classList.remove("is-menu-open");
+          navToggle.setAttribute("aria-expanded", "false");
+        };
+
+        if (!header || !navToggle || !menu) return;
+
+        navToggle.addEventListener("click", () => {
+          const open = header.classList.toggle("is-menu-open");
+          navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+
+        menu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (mobileQuery.matches) closeMenu();
+          });
+        });
+
+        window.addEventListener("resize", () => {
+          if (!mobileQuery.matches) closeMenu();
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") closeMenu();
+        });
+      })();
+    </script>
   </body>
 </html>

@@ -54,20 +54,29 @@
           />
         </div>
         <div>
-          <p class="brand-eyebrow">Rich Labs</p>
+          <p class="brand-eyebrow">Rich Labs Concept</p>
           <p class="brand-tagline">Company page concept</p>
         </div>
       </div>
-      <nav class="primary-nav" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="#work">Work</a>
-        <a href="#pricing">Structure</a>
-        <a href="#contact">Contact</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-lines" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <div class="header-menu" id="site-menu">
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#work">Work</a>
+          <a href="#pricing">Structure</a>
+          <a href="#contact">Contact</a>
       </nav>
       <div class="nav-actions">
         <a class="btn ghost" href="index.html">Homepage</a>
-        <a class="btn" href="#contact">Start a project</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
       </div>
     </header>
 
@@ -138,27 +147,28 @@
       <section class="section-block" id="process">
         <div class="section-intro">
           <p class="eyebrow">Process</p>
-          <h2>A practical, transparent build pipeline</h2>
+          <h2>How I would think through a real version later</h2>
         </div>
         <div class="focus-grid">
           <article class="focus-card panel">
-            <h3>1. Positioning sprint</h3>
+            <h3>1. Clarify the purpose</h3>
             <p>
-              Clarify audience, offer, and tone so the homepage message lands in seconds.
+              Decide what the company actually is, who it serves, and what belongs on the first
+              screen.
             </p>
           </article>
           <article class="focus-card panel">
-            <h3>2. Visual direction</h3>
+            <h3>2. Set the visual system</h3>
             <p>
-              Build a distinct UI language with typography, color, and rhythm aligned to your
-              company identity.
+              Rework typography, color, and supporting visuals around a real brand instead of a
+              placeholder identity.
             </p>
           </article>
           <article class="focus-card panel">
-            <h3>3. Build + launch</h3>
+            <h3>3. Replace concept content</h3>
             <p>
-              Ship a production-ready site with clean structure, mobile support, and fast load
-              behavior.
+              Swap in actual work, contact expectations, and a truthful offer before treating the
+              page like a live company site.
             </p>
           </article>
         </div>
@@ -236,6 +246,9 @@
           <p>
             This form is here as part of the layout and can also be used to reach me directly.
           </p>
+          <p class="form-success" hidden role="status">
+            Thanks. Your message was sent and the inquiry form came back to this page successfully.
+          </p>
           <form
             class="contact-form"
             action="https://formsubmit.co/rich.chao288@gmail.com"
@@ -297,5 +310,46 @@
         <a href="skill.html">Skill map</a> &middot; <a href="#top">Back to top</a>
       </p>
     </footer>
+    <script>
+      (() => {
+        const header = document.querySelector(".site-header");
+        const navToggle = document.querySelector(".nav-toggle");
+        const menu = document.querySelector(".header-menu");
+        const mobileQuery = window.matchMedia("(max-width: 760px)");
+        const successNotice = document.querySelector(".form-success");
+
+        const closeMenu = () => {
+          if (!header || !navToggle) return;
+          header.classList.remove("is-menu-open");
+          navToggle.setAttribute("aria-expanded", "false");
+        };
+
+        if (header && navToggle && menu) {
+          navToggle.addEventListener("click", () => {
+            const open = header.classList.toggle("is-menu-open");
+            navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+          });
+
+          menu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              if (mobileQuery.matches) closeMenu();
+            });
+          });
+
+          window.addEventListener("resize", () => {
+            if (!mobileQuery.matches) closeMenu();
+          });
+
+          document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") closeMenu();
+          });
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        if (successNotice && params.get("submitted") === "1") {
+          successNotice.hidden = false;
+        }
+      })();
+    </script>
   </body>
 </html>

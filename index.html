@@ -59,22 +59,31 @@
           <p class="brand-tagline">Creative technologist</p>
         </div>
       </div>
-      <nav class="primary-nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#now">Now</a>
-        <a href="#projects">Projects</a>
-        <a href="#proof">Proof</a>
-        <a href="#fandom">Fandom</a>
-        <a href="#journey">Journey</a>
-        <a href="#notes">Notes</a>
-        <a href="company.html">Company</a>
-        <a href="#connect">Connect</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="btn ghost" href="skill.html">Skill map</a>
-        <a class="btn" href="https://github.com/rchau8502/HomePage" target="_blank" rel="noopener"
-          >Site repo</a
-        >
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-lines" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <div class="header-menu" id="site-menu">
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#now">Now</a>
+          <a href="#projects">Projects</a>
+          <a href="#proof">Proof</a>
+          <a href="#fandom">Fandom</a>
+          <a href="#journey">Journey</a>
+          <a href="#notes">Notes</a>
+          <a href="company.html">Company</a>
+          <a href="#connect">Connect</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn ghost" href="skill.html">Skill map</a>
+          <a class="btn" href="https://github.com/rchau8502/HomePage" target="_blank" rel="noopener"
+            >Site repo</a
+          >
+        </div>
       </div>
     </header>
 
@@ -228,6 +237,17 @@
         </div>
         <div class="project-grid">
           <article class="project-card project-feature">
+            <div class="project-visual">
+              <img
+                class="project-shot"
+                src="zotfood-shot.jpg"
+                alt="Screenshot of the ZotFood project homepage"
+                width="960"
+                height="600"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
             <div class="project-meta">
               <span>Featured build</span>
               <a href="https://zotfood.vercel.app" target="_blank" rel="noopener">Live site</a>
@@ -245,6 +265,17 @@
           </article>
 
           <article class="project-card">
+            <div class="project-visual">
+              <img
+                class="project-shot"
+                src="anime-dojo-shot.png"
+                alt="Screenshot of the Anime Dojo project interface"
+                width="1280"
+                height="800"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
             <div class="project-meta">
               <span>Data story</span>
               <a href="https://anime-dojo.streamlit.app" target="_blank" rel="noopener">Open app</a>
@@ -279,7 +310,40 @@
         </div>
       </section>
 
-      <section class="section-grid story-grid reveal delay-5" id="fandom">
+      <section class="section-block reveal delay-5" id="links">
+        <div class="section-intro">
+          <p class="eyebrow">Selected Links</p>
+          <h2>Fast paths through the site</h2>
+          <p>
+            If you want the shortest route through the portfolio, these are the links worth opening
+            first.
+          </p>
+        </div>
+        <div class="proof-grid">
+          <article class="proof-card panel">
+            <p class="proof-tag">Code</p>
+            <h3>GitHub profile</h3>
+            <p>The main place to see current repos, experiments, and commit history.</p>
+            <a class="text-link" href="https://github.com/rchau8502" target="_blank" rel="noopener"
+              >Open GitHub -&gt;</a
+            >
+          </article>
+          <article class="proof-card panel">
+            <p class="proof-tag">Site</p>
+            <h3>Skill stack</h3>
+            <p>A focused page for languages, tools, and the areas I am learning right now.</p>
+            <a class="text-link" href="skill.html">Open skills -&gt;</a>
+          </article>
+          <article class="proof-card panel">
+            <p class="proof-tag">Concept</p>
+            <h3>Company page</h3>
+            <p>A grounded concept page showing how this design system could scale into a brand site.</p>
+            <a class="text-link" href="company.html">Open company concept -&gt;</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-grid story-grid reveal delay-6" id="fandom">
         <article class="panel story-copy">
           <p class="eyebrow">Fandom</p>
           <h2>Anime, playlists, and motion loops keep the work from going flat.</h2>
@@ -311,7 +375,7 @@
         </article>
       </section>
 
-      <section class="timeline section-block reveal delay-6" id="journey">
+      <section class="timeline section-block reveal delay-7" id="journey">
         <div class="section-intro">
           <p class="eyebrow">Journey</p>
           <h2>Recent milestones in public</h2>
@@ -350,7 +414,7 @@
         </ul>
       </section>
 
-      <section class="section-block proof-block reveal delay-7" id="proof">
+      <section class="section-block proof-block reveal delay-8" id="proof">
         <div class="section-intro">
           <p class="eyebrow">Proof</p>
           <h2>Signals that this site is active and maintained</h2>
@@ -387,7 +451,7 @@
         </div>
       </section>
 
-      <section class="notes section-block reveal delay-8" id="notes">
+      <section class="notes section-block reveal delay-9" id="notes">
         <div class="section-intro">
           <p class="eyebrow">Notes</p>
           <h2>Rules I keep returning to</h2>
@@ -459,6 +523,38 @@
     </footer>
     <script>
       (() => {
+        const header = document.querySelector(".site-header");
+        const navToggle = document.querySelector(".nav-toggle");
+        const menu = document.querySelector(".header-menu");
+        const mobileQuery = window.matchMedia("(max-width: 760px)");
+
+        const closeMenu = () => {
+          if (!header || !navToggle) return;
+          header.classList.remove("is-menu-open");
+          navToggle.setAttribute("aria-expanded", "false");
+        };
+
+        if (header && navToggle && menu) {
+          navToggle.addEventListener("click", () => {
+            const open = header.classList.toggle("is-menu-open");
+            navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+          });
+
+          menu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              if (mobileQuery.matches) closeMenu();
+            });
+          });
+
+          window.addEventListener("resize", () => {
+            if (!mobileQuery.matches) closeMenu();
+          });
+
+          document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") closeMenu();
+          });
+        }
+
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         const revealItems = document.querySelectorAll(".reveal");
 
