@@ -68,9 +68,6 @@
       </nav>
 
       <div class="header-actions">
-        <button class="button button-secondary" type="button" data-print-trigger>
-          Print CV
-        </button>
         <a class="button" href="https://github.com/rchau8502" target="_blank" rel="noopener">
           GitHub
         </a>
@@ -128,8 +125,8 @@
           <div class="signal-panel">
             <p class="panel-label">Review Guide</p>
             <p>
-              If you need the short version, read the summary below, scan the selected projects, and
-              use the print view for a CV-style copy.
+              If you need the short version, read the summary below and scan the selected projects
+              first.
             </p>
           </div>
         </aside>
@@ -146,7 +143,7 @@
         </article>
         <article data-reveal>
           <span>Platform</span>
-          <p>GitHub-backed portfolio with live project links and a printable resume layer.</p>
+          <p>GitHub-backed portfolio with live project links and a resume-style structure.</p>
         </article>
       </section>
 
@@ -262,7 +259,7 @@
             <ul>
               <li>Demonstrates editorial layout and personal branding without relying on templates.</li>
               <li>Connects live projects, supporting pages, and public code history.</li>
-              <li>Now doubles as a portfolio, resume, and CV-style summary.</li>
+              <li>Now doubles as a portfolio, resume, and professional summary.</li>
             </ul>
             <div class="link-row">
               <a href="https://github.com/rchau8502/HomePage" target="_blank" rel="noopener">
@@ -412,11 +409,6 @@
 
     <script>
       (() => {
-        const printTrigger = document.querySelector("[data-print-trigger]");
-        if (printTrigger) {
-          printTrigger.addEventListener("click", () => window.print());
-        }
-
         const revealItems = document.querySelectorAll("[data-reveal]");
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
