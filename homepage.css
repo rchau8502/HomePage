@@ -374,6 +374,7 @@ main {
 }
 
 .summary-strip,
+.evidence-strip,
 .summary-grid,
 .resume-layout,
 .skills-layout,
@@ -397,6 +398,35 @@ main {
 .summary-strip article:last-child {
   border-right: 0;
   padding-right: 0;
+}
+
+.evidence-strip {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 24px 0 0;
+}
+
+.evidence-strip article {
+  padding-right: 18px;
+  border-right: 1px solid var(--line);
+}
+
+.evidence-strip article:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+
+.evidence-strip article span {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-family: "Newsreader", serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  color: var(--ink);
+}
+
+.evidence-strip article p {
+  color: var(--muted);
 }
 
 .content-section {
@@ -590,18 +620,21 @@ main {
   .project-row,
   .summary-grid,
   .skills-layout,
-  .summary-strip {
+  .summary-strip,
+  .evidence-strip {
     grid-template-columns: 1fr;
   }
 
-  .summary-strip article {
+  .summary-strip article,
+  .evidence-strip article {
     padding-right: 0;
     border-right: 0;
     border-bottom: 1px solid var(--line);
     padding-bottom: 14px;
   }
 
-  .summary-strip article:last-child {
+  .summary-strip article:last-child,
+  .evidence-strip article:last-child {
     padding-bottom: 0;
     border-bottom: 0;
   }
@@ -726,7 +759,8 @@ main {
   .skills-layout,
   .project-row,
   .contact-layout,
-  .summary-strip {
+  .summary-strip,
+  .evidence-strip {
     grid-template-columns: 1fr;
     gap: 14px;
   }
